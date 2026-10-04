@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/*
+dist
+.output
+.nitro
+.vercel
+.yarn/install-state.gz
+.env*.local
+src/routeTree.gen.ts
+*.tsbuildinfo
+
+.tanstack
