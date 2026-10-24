@@ -8,17 +8,16 @@ Runs in the nodesandbox runtime: `npm install` → `npm run dev` → port 3000.
 ## Getting started
 
 ```sh
-corepack enable   # uses the Yarn 4 pinned in package.json
-yarn install
-yarn dev          # http://localhost:3000
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-| Script           | What it does                                              |
-| ---------------- | --------------------------------------------------------- |
-| `yarn dev`       | Vite dev server with SSR                                  |
-| `yarn build`     | Production build; Nitro packages the server for the host  |
-| `yarn start`     | Run the Node build from `.output/`                        |
-| `yarn typecheck` | `tsc`                                                     |
+| Script              | What it does                                              |
+| ------------------- | --------------------------------------------------------- |
+| `npm run dev`       | Vite dev server with SSR                                  |
+| `npm run build`     | Production build; Nitro packages the server for the host  |
+| `npm run start`     | Run the Node build from `.output/`                        |
+| `npm run typecheck` | `tsc`                                                     |
 
 ## Metadata
 
@@ -43,13 +42,13 @@ through to TanStack Start.
 ## Deploying to Vercel
 
 Push and deploy — no dashboard settings. `vercel.json` selects the TanStack
-Start preset and installs with Yarn 4 via Corepack; Nitro writes
+Start preset and installs with Bun; Nitro writes
 `.vercel/output/` during `vite build`.
 
 ## nodesandbox compatibility
 
 The sandbox runs Vite's native tools as WebAssembly (`NAPI_RS_FORCE_WASI`), and
-its installer resolves from `package.json` ranges rather than `yarn.lock`. The
+its installer resolves from `package.json` ranges rather than `package-lock.json`. The
 toolchain versions match `vite-shopify-storefront`:
 
 - `vite` is pinned to **8.3.2** (rolldown 1.2.x WASI binding).
