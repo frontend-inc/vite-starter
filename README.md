@@ -47,8 +47,7 @@ Start preset and installs with Bun; Nitro writes
 
 ## nodesandbox compatibility
 
-The sandbox runs Vite's native tools as WebAssembly (`NAPI_RS_FORCE_WASI`), and
-its installer resolves from `package.json` ranges rather than `package-lock.json`. The
+The sandbox runs Vite's native tools as WebAssembly (`NAPI_RS_FORCE_WASI`). The
 toolchain versions match `vite-shopify-storefront`:
 
 - `vite` is pinned to **8.3.2** (rolldown 1.2.x WASI binding).
